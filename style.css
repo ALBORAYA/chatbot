@@ -3,6 +3,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   background: #031321;
@@ -25,4 +26,54 @@ a {
 
 a:hover {
   color: #255784;
+}
+.chat-box {
+  border: 1px solid white;
+  min-height: 10rem;
+  padding: 2rem 1rem;
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.robot-chat-container {
+  color: blue;
+  background-color: yellow;
+  border: 1px solid white;
+  border-radius: 1rem;
+  height: 40%;
+}
+
+.robot-chat-container p {
+  color: blue;
+  background-color: yellow;
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+
+#robot {
+  display: flex;
+  flex-direction: column;
+}
+
+#human {
+  display: flex;
+  flex-direction: column;
+}
+.human-chat-container {
+  text-align: right;
+  color: white;
+  border: 1px solid red;
+  border-radius: 1rem;
+  height: 40%;
+  background-color: red;
+  float: right;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+.voice {
+  text-align: center;
+  margin: 0 auto;
 }

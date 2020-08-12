@@ -7,7 +7,7 @@ const recorder = new SpeechRecognition();
 
 function addHumanText(text) {
   const chatContainer = document.createElement("div");
-  chatContainer.classList.add("chat-container");
+  chatContainer.classList.add("human-chat-container");
 
   const chatBox = document.createElement("p");
   chatBox.classList.add("voice2text");
@@ -22,7 +22,7 @@ function addHumanText(text) {
 const chatContainer1 = document.createElement("div");
 
 function addBotText(text) {
-  chatContainer1.classList.add("chat-container");
+  chatContainer1.classList.add("robot-chat-container");
   chatContainer1.classList.add("darker");
   const chatBox1 = document.createElement("p");
   chatBox1.classList.add("voice2text");
@@ -34,23 +34,30 @@ function addBotText(text) {
 
 function botVoice(message) {
   const speech = new SpeechSynthesisUtterance();
-  speech.text = "this is a test message";
-  let array = [];
+  speech.text = "sorry, I did not understand that";
 
-  if (message.includes("Leo cara de pedo")) {
-    speech.text = " He is all that";
+  if (message.includes("how are you")) {
+    speech.text = "I am fine, thanks. How are you?";
   }
 
-  if (message.includes("Te bañaste hoy")) speech.text = "no";
-  array.push(message);
-  speech.text = " No " + array[0];
+  if (message.includes("fine")) {
+    speech.text = "Nice to hear that. How can I assist you today?";
+  }
+
+  if (message.includes("weather")) {
+    speech.text = "Of course. Where are you currently?";
+  }
+
+  if (message.includes("London")) {
+    speech.text = "It is 18 degrees and sunny.";
+  }
 
   speech.volume = 1;
   speech.volume = 1;
   speech.rate = 1;
   speech.pitch = 1;
   window.speechSynthesis.speak(speech);
-  let element = document.getElementById("container");
+  let element = document.getElementById("robot");
   element.appendChild(addBotText(speech.text));
 }
 
@@ -61,7 +68,7 @@ recorder.onstart = () => {
 recorder.onresult = (event) => {
   const resultIndex = event.resultIndex;
   const transcript = event.results[resultIndex][0].transcript;
-  let element = document.getElementById("container");
+  let element = document.getElementById("human");
   element.appendChild(addHumanText(transcript));
   botVoice(transcript);
 };
