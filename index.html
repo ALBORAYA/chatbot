@@ -1,3 +1,5 @@
+Project by Bernardo Balestrini 14/8/2020
+Chatbox only use with chrome
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,21 +9,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="voice" href="#">Activate Voice</a>
+    <a class="voice" href="#"
+      >Click this Button each time to Activate speaker. Begin by saying: Hello!</a
+    >
+    <div class="chat-container">
+      <p class="voice2text">
+        <ol>
+          <li> This chatbot only works on chrome and works best with usa-english in browser and computer configuration.</li>
+          <li> Say, Hello!</li>
+          <li> Ask for the temperature.</li>
+          <li> Say, you are in Spain.</li>
+          <li> Say, you are in Barcelona.</li>
+        </ol>
+        
+                             
+      </p>
+    </div>
     <div class="chat-box">
       <div id="robot">
-        <!--
-      <div class="chat-container">
-        <p class="voice2text">Hi there</p>
-      </div>
-
-      <div class="chat-container darker">
-        <p class="voice2text">Hello back</p>
-      </div>
-    -->
       </div>
       <div id="human"></div>
     </div>
+    <ul id="nos"></ul>
+
     <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   </body>
 </html>

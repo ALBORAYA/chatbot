@@ -1,25 +1,31 @@
-body {
+/* 
+Project by Bernardo Balestrini 14/8/2020
+Chatbox only use with chrome */
+
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: left;
   align-items: center;
+  flex-direction: column;
+  align-items: left;
   min-height: 100vh;
-  background: #031321;
-  font-family: consolas;
-  color: white;
+  background: url("./pattern-2.png");
 }
 
 a {
   position: relative;
   display: inline-block;
   padding: 15px 30px;
-  color: #2196f3;
+  color: #eaeff3;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 25px;
   overflow: hidden;
   transition: 0.2s;
 }
@@ -30,44 +36,65 @@ a:hover {
 .chat-box {
   border: 1px solid white;
   min-height: 10rem;
-  padding: 2rem 1rem;
-  width: 40vw;
+  padding: 4rem 2rem;
+  width: 80vw;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  overflow: auto;
+  height: 50vh;
 }
 .robot-chat-container {
+  text-align: left;
   color: blue;
-  background-color: yellow;
+  background-image: linear-gradient(to left, white, red);
   border: 1px solid white;
-  border-radius: 1rem;
+  border-radius: 2rem;
   height: 40%;
+  margin: 15px;
+  padding: 2rem 1rem;
+  font-size: 20px;
 }
 
-.robot-chat-container p {
+.human-chat-container {
+  text-align: left;
   color: blue;
-  background-color: yellow;
+  background-image: linear-gradient(to left, white, red);
   border: 1px solid white;
-  border-radius: 1rem;
+  border-radius: 2rem;
+  height: 40%;
+  margin: 15px;
+  padding: 2rem 1rem;
+  float: left;
+  font-size: 20px;
 }
 
 #robot {
   display: flex;
   flex-direction: column;
+  width: 45%;
 }
 
 #human {
   display: flex;
   flex-direction: column;
+  width: 45%;
 }
 .human-chat-container {
-  text-align: right;
+  text-align: left;
   color: white;
+  background-image: linear-gradient(to left, violet, blue);
   border: 1px solid red;
-  border-radius: 1rem;
+  border-radius: 2rem;
   height: 40%;
-  background-color: red;
-  float: right;
+  margin: 15px;
+  padding: 2rem 1rem;
+  float: left;
+  font-size: 20px;
+}
+.chat-container {
+  font-size: 20px;
+  color: white;
 }
 .parent {
   display: flex;
@@ -75,5 +102,7 @@ a:hover {
 }
 .voice {
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
+  box-shadow: 5px 5px 5px 5px;
 }
+ 
